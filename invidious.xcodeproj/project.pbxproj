@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C474F1992450549A00A10ABF /* invidious.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C474F1982450549A00A10ABF /* invidious.entitlements */; };
+		C474F19B2450549A00A10ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F19A2450549A00A10ABF /* AppDelegate.swift */; };
+		C474F19E2450549A00A10ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C474F19C2450549A00A10ABF /* Main.storyboard */; };
+		C474F1A02450549A00A10ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F19F2450549A00A10ABF /* ViewController.swift */; };
+		C474F1A22450549C00A10ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C474F1A12450549C00A10ABF /* Assets.xcassets */; };
+		C474F1A92450549C00A10ABF /* invidious Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C474F1A82450549C00A10ABF /* invidious Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C474F1AE2450549C00A10ABF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C474F1AD2450549C00A10ABF /* Cocoa.framework */; };
+		C474F1B12450549C00A10ABF /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F1B02450549C00A10ABF /* SafariExtensionHandler.swift */; };
+		C474F1B32450549C00A10ABF /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F1B22450549C00A10ABF /* SafariExtensionViewController.swift */; };
+		C474F1B62450549C00A10ABF /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C474F1B42450549C00A10ABF /* SafariExtensionViewController.xib */; };
+		C474F1B92450549C00A10ABF /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = C474F1B82450549C00A10ABF /* script.js */; };
+		C474F1BB2450549C00A10ABF /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C474F1BA2450549C00A10ABF /* ToolbarItemIcon.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C474F1AA2450549C00A10ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C474F18D2450549A00A10ABF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C474F1A72450549C00A10ABF;
+			remoteInfo = "invidious Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C474F1C22450549C00A10ABF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C474F1A92450549C00A10ABF /* invidious Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C474F1952450549A00A10ABF /* invidious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = invidious.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C474F1982450549A00A10ABF /* invidious.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = invidious.entitlements; sourceTree = "<group>"; };
+		C474F19A2450549A00A10ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C474F19D2450549A00A10ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C474F19F2450549A00A10ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C474F1A12450549C00A10ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C474F1A32450549C00A10ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C474F1A82450549C00A10ABF /* invidious Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "invidious Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C474F1AD2450549C00A10ABF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C474F1B02450549C00A10ABF /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		C474F1B22450549C00A10ABF /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		C474F1B52450549C00A10ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		C474F1B72450549C00A10ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C474F1B82450549C00A10ABF /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		C474F1BA2450549C00A10ABF /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		C474F1BC2450549C00A10ABF /* invidious_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = invidious_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C474F1922450549A00A10ABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474F1A52450549C00A10ABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474F1AE2450549C00A10ABF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C474F18C2450549A00A10ABF = {
+			isa = PBXGroup;
+			children = (
+				C474F1972450549A00A10ABF /* invidious */,
+				C474F1AF2450549C00A10ABF /* invidious Extension */,
+				C474F1AC2450549C00A10ABF /* Frameworks */,
+				C474F1962450549A00A10ABF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C474F1962450549A00A10ABF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C474F1952450549A00A10ABF /* invidious.app */,
+				C474F1A82450549C00A10ABF /* invidious Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C474F1972450549A00A10ABF /* invidious */ = {
+			isa = PBXGroup;
+			children = (
+				C474F1982450549A00A10ABF /* invidious.entitlements */,
+				C474F19A2450549A00A10ABF /* AppDelegate.swift */,
+				C474F19C2450549A00A10ABF /* Main.storyboard */,
+				C474F19F2450549A00A10ABF /* ViewController.swift */,
+				C474F1A12450549C00A10ABF /* Assets.xcassets */,
+				C474F1A32450549C00A10ABF /* Info.plist */,
+			);
+			path = invidious;
+			sourceTree = "<group>";
+		};
+		C474F1AC2450549C00A10ABF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C474F1AD2450549C00A10ABF /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C474F1AF2450549C00A10ABF /* invidious Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C474F1B02450549C00A10ABF /* SafariExtensionHandler.swift */,
+				C474F1B22450549C00A10ABF /* SafariExtensionViewController.swift */,
+				C474F1B42450549C00A10ABF /* SafariExtensionViewController.xib */,
+				C474F1B72450549C00A10ABF /* Info.plist */,
+				C474F1B82450549C00A10ABF /* script.js */,
+				C474F1BA2450549C00A10ABF /* ToolbarItemIcon.pdf */,
+				C474F1BC2450549C00A10ABF /* invidious_Extension.entitlements */,
+			);
+			path = "invidious Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C474F1942450549A00A10ABF /* invidious */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious" */;
+			buildPhases = (
+				C474F1912450549A00A10ABF /* Sources */,
+				C474F1922450549A00A10ABF /* Frameworks */,
+				C474F1932450549A00A10ABF /* Resources */,
+				C474F1C22450549C00A10ABF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C474F1AB2450549C00A10ABF /* PBXTargetDependency */,
+			);
+			name = invidious;
+			productName = invidious;
+			productReference = C474F1952450549A00A10ABF /* invidious.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C474F1A72450549C00A10ABF /* invidious Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C474F1BF2450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious Extension" */;
+			buildPhases = (
+				C474F1A42450549C00A10ABF /* Sources */,
+				C474F1A52450549C00A10ABF /* Frameworks */,
+				C474F1A62450549C00A10ABF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "invidious Extension";
+			productName = "invidious Extension";
+			productReference = C474F1A82450549C00A10ABF /* invidious Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C474F18D2450549A00A10ABF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Francesco Pierfederici";
+				TargetAttributes = {
+					C474F1942450549A00A10ABF = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					C474F1A72450549C00A10ABF = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = C474F1902450549A00A10ABF /* Build configuration list for PBXProject "invidious" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C474F18C2450549A00A10ABF;
+			productRefGroup = C474F1962450549A00A10ABF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C474F1942450549A00A10ABF /* invidious */,
+				C474F1A72450549C00A10ABF /* invidious Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C474F1932450549A00A10ABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474F1992450549A00A10ABF /* invidious.entitlements in Resources */,
+				C474F1A22450549C00A10ABF /* Assets.xcassets in Resources */,
+				C474F19E2450549A00A10ABF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474F1A62450549C00A10ABF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474F1BB2450549C00A10ABF /* ToolbarItemIcon.pdf in Resources */,
+				C474F1B62450549C00A10ABF /* SafariExtensionViewController.xib in Resources */,
+				C474F1B92450549C00A10ABF /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C474F1912450549A00A10ABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474F1A02450549A00A10ABF /* ViewController.swift in Sources */,
+				C474F19B2450549A00A10ABF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C474F1A42450549C00A10ABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C474F1B32450549C00A10ABF /* SafariExtensionViewController.swift in Sources */,
+				C474F1B12450549C00A10ABF /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C474F1AB2450549C00A10ABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C474F1A72450549C00A10ABF /* invidious Extension */;
+			targetProxy = C474F1AA2450549C00A10ABF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C474F19C2450549A00A10ABF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C474F19D2450549A00A10ABF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C474F1B42450549C00A10ABF /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C474F1B52450549C00A10ABF /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C474F1BD2450549C00A10ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C474F1BE2450549C00A10ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C474F1C02450549C00A10ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "invidious Extension/invidious_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				INFOPLIST_FILE = "invidious Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pythoninside.invidious-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C474F1C12450549C00A10ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "invidious Extension/invidious_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				INFOPLIST_FILE = "invidious Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pythoninside.invidious-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C474F1C42450549C00A10ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = invidious/invidious.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				INFOPLIST_FILE = invidious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pythoninside.invidious;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C474F1C52450549C00A10ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = invidious/invidious.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				INFOPLIST_FILE = invidious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pythoninside.invidious;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C474F1902450549A00A10ABF /* Build configuration list for PBXProject "invidious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474F1BD2450549C00A10ABF /* Debug */,
+				C474F1BE2450549C00A10ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C474F1BF2450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474F1C02450549C00A10ABF /* Debug */,
+				C474F1C12450549C00A10ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C474F1C42450549C00A10ABF /* Debug */,
+				C474F1C52450549C00A10ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C474F18D2450549A00A10ABF /* Project object */;
+}
