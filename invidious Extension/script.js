@@ -92,7 +92,7 @@ function redirectClick(event) {
     // Is this a Google or Facebook link? If so, extract the real link.
     if(isGoogleLink(url)) {
         url = sanitizeGoogleURL(url);
-    } else if(isFacebookLink) {
+    } else if(isFacebookLink(url)) {
         url = sanitizeFacebookURL(url);
     }
     
