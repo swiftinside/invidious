@@ -22,3 +22,8 @@ DerivedData/
 
 ## Gcc Patch
 /*.gcno
+
+## JS
+node_modules/
+package-lock.json
+package.json
