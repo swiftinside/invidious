@@ -15,11 +15,12 @@ const ythostnames = [
   'www.youtube.com',
   'm.youtube.com',
   'www.m.youtube.com',
-  'youtu.be',
   'youtube-nocookie.com',
   'www.youtube-nocookie.com',
 ];
-const ytrx = /(?:\/|%3D|v=|vi=)([0-9A-z-_]{11})(?:[%#?&]|$)/m;
+const ytwatchhostnames = [
+  'youtu.be',
+];
 
 
 function alreadySanitized(url) {
@@ -31,12 +32,17 @@ function sanitizeYouTubeURL(url) {
     return url;
   }
 
-  const matches = ytrx.exec(url.href);
-  if (matches == null || matches.length < 2) {
-    // console.log('This should not happen, please tell Francesco');
-    return null;
+  if (ythostnames.includes(url.hostname)) {
+    if (url.pathname.search('^/(watch|playlist|search|channel)') > -1 || url.pathname.startsWith('/embed/')) {
+      return new URL(`${invidiousURL}${url.pathname}${url.search}`);
+    }
+    return new URL(invidiousURL);
   }
-  return `${invidiousURL}/watch?v=${matches[1]}`;
+
+  if (ytwatchhostnames.includes(url.hostname)) {
+    return new URL(`${invidiousURL}/watch?v=${url.pathname.replace('/', '')}`);
+  }
+  return url;
 }
 
 function sanitizeGoogleURL(url) {
@@ -48,17 +54,6 @@ function sanitizeGoogleURL(url) {
 
 function sanitizeFacebookURL(url) {
   return new URL(url.searchParams.get('u'));
-}
-
-function findAnchor(event) {
-  let anchor = null;
-  for (let n = event.target; n.parentNode; n = n.parentNode) {
-    if (n.nodeName === 'A') {
-      anchor = n;
-      break;
-    }
-  }
-  return anchor;
 }
 
 function isYouTubeLink(url) {
@@ -74,49 +69,19 @@ function isFacebookLink(url) {
   return url.hostname === 'l.facebook.com';
 }
 
-function redirectClick(event) {
-  // Now, this can change meaning depending on context.
-  const anchor = this instanceof HTMLAnchorElement ? this : findAnchor(event);
-  if (anchor == null) {
-    // The user clicked on something we do not care about.
-    return true;
-  }
+function escapeFromEvilEmpires() {
+  let loc = new URL(window.top.location.href);
 
-  // Convert it to a URL object. If this fails, we are not interested in the url.
-  let url;
-  try {
-    url = new URL(anchor.href);
-  } catch (e) {
-    return true;
+  if (isYouTubeLink(loc)) {
+    loc = sanitizeYouTubeURL(loc);
+  } else if (isGoogleLink(loc)) {
+    loc = sanitizeGoogleURL(loc);
+  } else if (isFacebookLink(loc)) {
+    loc = sanitizeFacebookURL(loc);
   }
-
-  // Is this a Google or Facebook link? If so, extract the real link.
-  if (isGoogleLink(url)) {
-    url = sanitizeGoogleURL(url);
-  } else if (isFacebookLink(url)) {
-    url = sanitizeFacebookURL(url);
+  if (loc.href !== window.top.location.href) {
+    window.top.location.href = loc.href;
   }
-
-  // Is it a youtube link or not?
-  if (!isYouTubeLink(url)) {
-    return true;
-  }
-
-  // Yup
-  event.preventDefault();
-  let target = anchor.target ? anchor.target : '_self';
-  if (event.ctrlKey || event.metaKey || event.button > 0) {
-    target = '_blank';
-  }
-
-  const sanitizedUrl = sanitizeYouTubeURL(url);
-  if (sanitizedUrl == null) {
-    // The user might have clicked somewhere else.
-    return true;
-  }
-
-  window.open(sanitizedUrl, target);
-  return false;
 }
 
-document.addEventListener('click', redirectClick);
+escapeFromEvilEmpires();
