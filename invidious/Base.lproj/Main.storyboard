@@ -76,8 +76,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="App Name" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES"/>
+                    <window key="window" title="Invidious" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" visibleAtLaunch="NO" frameAutosaveName="InvidiousAppMainWindow" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="229" width="480" height="281"/>
@@ -102,52 +102,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="329"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="42" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLV-xE-AGT">
-                                <rect key="frame" x="0.0" y="34" width="480" height="250"/>
-                                <subviews>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
-                                        <rect key="frame" x="176" y="121" width="128" height="129"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="AppIcon" id="Hhb-TZ-Dhg"/>
-                                    </imageView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
-                                        <rect key="frame" x="206" y="63" width="68" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="App Name" id="S7v-7o-3vW">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
-                                        <rect key="frame" x="99" y="-7" width="282" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                            <string key="keyEquivalent" base64-UTF8="YES">
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
+                                <rect key="frame" x="332" y="181" width="128" height="128"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" image="AppIcon" id="Hhb-TZ-Dhg"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
+                                <rect key="frame" x="18" y="293" width="126" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Invidious for Safari" id="S7v-7o-3vW">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
+                                <rect key="frame" x="99" y="13" width="282" height="32"/>
+                                <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
 DQ
 </string>
-                                            <connections>
-                                                <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="vKk-Xb-MPh"/>
-                                            </connections>
-                                        </buttonCell>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                                    <connections>
+                                        <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="vKk-Xb-MPh"/>
+                                    </connections>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-jD-crr">
+                                <rect key="frame" x="18" y="269" width="60" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Instance:" id="Z1A-xo-96u">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fis-si-6eK">
+                                <rect key="frame" x="82" y="263" width="194" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="🇺🇸 invidio.us" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="njC-88-Yt5" id="eNx-Ai-MmH">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="uC4-0W-EFe">
+                                        <items>
+                                            <menuItem title="🇺🇸 invidio.us" state="on" id="njC-88-Yt5"/>
+                                            <menuItem title="🇩🇪 invidious.13ad.de" id="EZj-Ye-HP8"/>
+                                            <menuItem title="🇩🇪 invidious.ggc-project.de" id="EVX-1y-vCh"/>
+                                            <menuItem title="🇫🇮 invidious.ggc-project.de" id="7Uk-ee-xRQ" userLabel="🇩🇪 invidious.snopyta.org"/>
+                                            <menuItem title="🇫🇷 invidious.tozein.com" id="5YR-20-6Yd"/>
+                                            <menuItem title="🇩🇪 yt.maisputain.ovh" id="0Z3-rH-5Fd"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ZLV-xE-AGT" secondAttribute="trailing" id="7aD-Ze-9ed"/>
-                            <constraint firstItem="ZLV-xE-AGT" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="45" id="AJ3-sx-ZQx"/>
-                            <constraint firstAttribute="bottom" secondItem="ZLV-xE-AGT" secondAttribute="bottom" constant="34" id="KVY-ss-lTJ"/>
-                            <constraint firstItem="ZLV-xE-AGT" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="mT6-ee-vkp"/>
+                            <constraint firstAttribute="bottom" secondItem="ooh-eV-eLQ" secondAttribute="bottom" constant="20" symbolic="YES" id="1g8-sH-1yA"/>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="Fis-si-6eK" secondAttribute="trailing" constant="59" id="Ase-kW-yZv"/>
+                            <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="DfV-pM-1kR"/>
+                            <constraint firstItem="Fis-si-6eK" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="42" id="FUE-r8-iab"/>
+                            <constraint firstItem="q8P-jD-crr" firstAttribute="top" secondItem="EB0-ac-UZR" secondAttribute="bottom" constant="8" id="LLg-4L-UmN"/>
+                            <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="FWV-e2-WQh" secondAttribute="top" id="N0m-go-JHD"/>
+                            <constraint firstItem="EB0-ac-UZR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ORC-mv-Tnv"/>
+                            <constraint firstAttribute="trailing" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="20" symbolic="YES" id="TZv-Pk-yA1"/>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="q8P-jD-crr" secondAttribute="trailing" constant="256" id="cCU-BK-bZX"/>
+                            <constraint firstItem="Fis-si-6eK" firstAttribute="leading" secondItem="q8P-jD-crr" secondAttribute="trailing" constant="8" id="d78-rg-aYx"/>
+                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="gsh-we-MJn"/>
+                            <constraint firstItem="q8P-jD-crr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="uGM-XX-aOx"/>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EB0-ac-UZR" secondAttribute="trailing" constant="8" symbolic="YES" id="xbs-Hp-uLd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -156,7 +175,7 @@ DQ
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="702"/>
+            <point key="canvasLocation" x="269" y="605.5"/>
         </scene>
     </scenes>
     <resources>
