@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SelectedInstanceName</key>
+	<string>🇺🇸 invidio.us</string>
+	<key>Instances</key>
+	<dict>
+		<key>🇺🇸 invidio.us</key>
+		<string>https://invidio.us</string>
+		<key>🇫🇮 invidious.snopyta.org</key>
+		<string>https://invidious.snopyta.org</string>
+		<key>🇩🇪 invidious.13ad.de</key>
+		<string>https://invidious.13ad.de</string>
+		<key>🇩🇪 invidious.ggc-project.de</key>
+		<string>https://invidious.ggc-project.de</string>
+		<key>🇩🇪 yt.maisputain.ovh</key>
+		<string>https://yt.maisputain.ovh</string>
+		<key>🇩🇪 invidious.toot.koeln</key>
+		<string>https://invidious.toot.koeln</string>
+		<key>🇩🇪 yewtu.be</key>
+		<string>https://yewtu.be</string>
+		<key>🇫🇷 invidious.fdn.fr</key>
+		<string>https://invidious.fdn.fr</string>
+	</dict>
+</dict>
+</plist>
