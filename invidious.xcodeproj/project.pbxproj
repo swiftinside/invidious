@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C45FC3E3245ADDC000B48291 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C45FC3E2245ADDC000B48291 /* Defaults.plist */; };
+		C45FC3E8245B152300B48291 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FC3E7245B152300B48291 /* Utils.swift */; };
 		C474F1992450549A00A10ABF /* invidious.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C474F1982450549A00A10ABF /* invidious.entitlements */; };
 		C474F19B2450549A00A10ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474F19A2450549A00A10ABF /* AppDelegate.swift */; };
 		C474F19E2450549A00A10ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C474F19C2450549A00A10ABF /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C45FC3E2245ADDC000B48291 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		C45FC3E7245B152300B48291 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C474F1952450549A00A10ABF /* invidious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = invidious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C474F1982450549A00A10ABF /* invidious.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = invidious.entitlements; sourceTree = "<group>"; };
 		C474F19A2450549A00A10ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,8 +113,10 @@
 				C474F19A2450549A00A10ABF /* AppDelegate.swift */,
 				C474F19C2450549A00A10ABF /* Main.storyboard */,
 				C474F19F2450549A00A10ABF /* ViewController.swift */,
+				C45FC3E7245B152300B48291 /* Utils.swift */,
 				C474F1A12450549C00A10ABF /* Assets.xcassets */,
 				C474F1A32450549C00A10ABF /* Info.plist */,
+				C45FC3E2245ADDC000B48291 /* Defaults.plist */,
 			);
 			path = invidious;
 			sourceTree = "<group>";
@@ -144,6 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious" */;
 			buildPhases = (
+				C45FC3E6245B0CBF00B48291 /* ShellScript */,
 				C474F1912450549A00A10ABF /* Sources */,
 				C474F1922450549A00A10ABF /* Frameworks */,
 				C474F1932450549A00A10ABF /* Resources */,
@@ -218,6 +225,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45FC3E3245ADDC000B48291 /* Defaults.plist in Resources */,
 				C474F1992450549A00A10ABF /* invidious.entitlements in Resources */,
 				C474F1A22450549C00A10ABF /* Assets.xcassets in Resources */,
 				C474F19E2450549A00A10ABF /* Main.storyboard in Resources */,
@@ -236,6 +244,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C45FC3E6245B0CBF00B48291 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C474F1912450549A00A10ABF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -243,6 +271,7 @@
 			files = (
 				C474F1A02450549A00A10ABF /* ViewController.swift in Sources */,
 				C474F19B2450549A00A10ABF /* AppDelegate.swift in Sources */,
+				C45FC3E8245B152300B48291 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

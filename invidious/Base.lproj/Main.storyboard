@@ -76,11 +76,10 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Invidious" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" visibleAtLaunch="NO" frameAutosaveName="InvidiousAppMainWindow" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                    <window key="window" title="Invidious" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="229" width="480" height="281"/>
+                        <rect key="contentRect" x="644" y="476" width="480" height="281"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
@@ -99,11 +98,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="invidious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="329"/>
+                        <rect key="frame" x="0.0" y="0.0" width="554" height="329"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
-                                <rect key="frame" x="332" y="181" width="128" height="128"/>
+                                <rect key="frame" x="406" y="181" width="128" height="128"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" image="AppIcon" id="Hhb-TZ-Dhg"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
@@ -115,7 +114,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
-                                <rect key="frame" x="99" y="13" width="282" height="32"/>
+                                <rect key="frame" x="136" y="13" width="282" height="32"/>
                                 <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -128,49 +127,59 @@ DQ
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-jD-crr">
-                                <rect key="frame" x="18" y="269" width="60" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Instance:" id="Z1A-xo-96u">
+                                <rect key="frame" x="18" y="64" width="120" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Preferred Instance:" id="Z1A-xo-96u">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fis-si-6eK">
-                                <rect key="frame" x="82" y="263" width="194" height="25"/>
-                                <popUpButtonCell key="cell" type="push" title="🇺🇸 invidio.us" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="njC-88-Yt5" id="eNx-Ai-MmH">
+                                <rect key="frame" x="142" y="58" width="259" height="25"/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="eNx-Ai-MmH">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <menu key="menu" id="uC4-0W-EFe">
-                                        <items>
-                                            <menuItem title="🇺🇸 invidio.us" state="on" id="njC-88-Yt5"/>
-                                            <menuItem title="🇩🇪 invidious.13ad.de" id="EZj-Ye-HP8"/>
-                                            <menuItem title="🇩🇪 invidious.ggc-project.de" id="EVX-1y-vCh"/>
-                                            <menuItem title="🇫🇮 invidious.ggc-project.de" id="7Uk-ee-xRQ" userLabel="🇩🇪 invidious.snopyta.org"/>
-                                            <menuItem title="🇫🇷 invidious.tozein.com" id="5YR-20-6Yd"/>
-                                            <menuItem title="🇩🇪 yt.maisputain.ovh" id="0Z3-rH-5Fd"/>
-                                        </items>
-                                    </menu>
+                                    <menu key="menu" id="uC4-0W-EFe"/>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="selectInstance:" target="XfG-lQ-9wD" id="59K-f7-ar2"/>
+                                </connections>
                             </popUpButton>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-DP-5mP">
+                                <rect key="frame" x="20" y="109" width="380" height="176"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="justified" id="vco-8A-9pO">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Replace all links to YouTube with the Invidious instance selected below (by default invidio.us). 
+
+Invidious (https://invidio.us) is an alternate frontend for YouTube without ads and without all the annoying "features" of the official YouTube website (e.g. tracking, auto-play, mini player etc.).
+
+To enable/disable this extension, simply click on the button at the bottom of this window and select/deselect the checkbox next to the extension name in Safari Preferences.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="oAk-DP-5mP" secondAttribute="trailing" constant="8" id="0UF-0G-qle"/>
                             <constraint firstAttribute="bottom" secondItem="ooh-eV-eLQ" secondAttribute="bottom" constant="20" symbolic="YES" id="1g8-sH-1yA"/>
-                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="Fis-si-6eK" secondAttribute="trailing" constant="59" id="Ase-kW-yZv"/>
+                            <constraint firstAttribute="bottom" secondItem="q8P-jD-crr" secondAttribute="bottom" constant="64" id="8qZ-xq-i0V"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="DfV-pM-1kR"/>
-                            <constraint firstItem="Fis-si-6eK" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="42" id="FUE-r8-iab"/>
-                            <constraint firstItem="q8P-jD-crr" firstAttribute="top" secondItem="EB0-ac-UZR" secondAttribute="bottom" constant="8" id="LLg-4L-UmN"/>
+                            <constraint firstItem="oAk-DP-5mP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="Iar-cr-UEb"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="FWV-e2-WQh" secondAttribute="top" id="N0m-go-JHD"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ORC-mv-Tnv"/>
                             <constraint firstAttribute="trailing" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="20" symbolic="YES" id="TZv-Pk-yA1"/>
-                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="q8P-jD-crr" secondAttribute="trailing" constant="256" id="cCU-BK-bZX"/>
-                            <constraint firstItem="Fis-si-6eK" firstAttribute="leading" secondItem="q8P-jD-crr" secondAttribute="trailing" constant="8" id="d78-rg-aYx"/>
+                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="top" secondItem="Fis-si-6eK" secondAttribute="bottom" constant="20" id="Yyu-DK-d8O"/>
                             <constraint firstItem="ooh-eV-eLQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="gsh-we-MJn"/>
+                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="Fis-si-6eK" secondAttribute="trailing" constant="8" id="ofu-uL-2Lp"/>
+                            <constraint firstItem="oAk-DP-5mP" firstAttribute="top" secondItem="EB0-ac-UZR" secondAttribute="bottom" constant="8" id="sdk-6W-FGz"/>
                             <constraint firstItem="q8P-jD-crr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="uGM-XX-aOx"/>
+                            <constraint firstItem="Fis-si-6eK" firstAttribute="leading" secondItem="q8P-jD-crr" secondAttribute="trailing" constant="8" id="xZa-oh-mnm"/>
                             <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EB0-ac-UZR" secondAttribute="trailing" constant="8" symbolic="YES" id="xbs-Hp-uLd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appNameLabel" destination="EB0-ac-UZR" id="SDO-j1-PQa"/>
+                        <outlet property="instancePopUpButton" destination="Fis-si-6eK" id="JnP-Tk-q6j"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
