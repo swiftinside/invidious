@@ -69,6 +69,5 @@ func displayGenericErrorAndQuit() {
 func sorted(_ instanceNames: [InstanceName]) -> [InstanceName] {
     // Sort the given invidious instance names appropriately. For the time being we just sort alphabetically, but it
     // would be better to sort using, e.g. geographical proximity, ping times, uptime stats etc.
-    // TODO: sort instances smarter
     return instanceNames.sorted()
 }
