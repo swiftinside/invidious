@@ -25,7 +25,10 @@ let kDefaultInstanceUrl = "https://invidio.us"
 
 // UI Elements
 let kAppName = "invidious"
-let kEnabledIcon = "🟢"
-let kDisabledIcon = "🔴"
-let kEnabledString = "The extension is enabled"
+let kEnabledIcon = "👍"
+let kDisabledIcon = "⚠️"
+let kEnabledString = "The extension is enabled  "    // Just to make the two string equal in length
 let kDisabledString = "The extension is disabled"
+
+// Notifications
+let kExtensionStatusTopic = "com.pythoninside.invidious:extensionStatusUpdated"

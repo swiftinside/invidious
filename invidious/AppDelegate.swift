@@ -7,9 +7,11 @@
 //
 
 import Cocoa
+import SafariServices.SFSafariApplication
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // pass
     }
@@ -20,5 +22,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
+    }
+
+    func applicationWillBecomeActive(_ notification: Notification) {
+        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: kExtBundleId) { state, error in
+            guard error == nil else {
+                return
+            }
+
+            let enabled = state?.isEnabled ?? false
+            // DispatchQueue.main.async {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: kExtensionStatusTopic),
+                object: self,
+                userInfo: ["enabled": enabled])
+            // }
+        }
     }
 }

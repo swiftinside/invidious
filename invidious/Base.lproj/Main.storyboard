@@ -66,9 +66,9 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="invidious" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="invidious" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="76" y="-134"/>
         </scene>
@@ -98,11 +98,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="invidious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="554" height="329"/>
+                        <rect key="frame" x="0.0" y="0.0" width="562" height="329"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FWV-e2-WQh" userLabel="IconView">
-                                <rect key="frame" x="406" y="181" width="128" height="128"/>
+                                <rect key="frame" x="414" y="181" width="128" height="128"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="topLeft" image="AppIcon" id="Hhb-TZ-Dhg"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EB0-ac-UZR">
@@ -113,40 +113,40 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
-                                <rect key="frame" x="136" y="13" width="282" height="32"/>
-                                <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <string key="keyEquivalent" base64-UTF8="YES">
-DQ
-</string>
-                                    <connections>
-                                        <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="vKk-Xb-MPh"/>
-                                    </connections>
-                                </buttonCell>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-jD-crr">
-                                <rect key="frame" x="18" y="64" width="120" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Preferred Instance:" id="Z1A-xo-96u">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fis-si-6eK">
-                                <rect key="frame" x="142" y="58" width="259" height="25"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="eNx-Ai-MmH">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                    <menu key="menu" id="uC4-0W-EFe"/>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="selectInstance:" target="XfG-lQ-9wD" id="59K-f7-ar2"/>
-                                </connections>
-                            </popUpButton>
+                            <stackView distribution="fill" orientation="horizontal" alignment="centerY" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pR0-cC-q9W">
+                                <rect key="frame" x="22" y="62" width="384" height="21"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-jD-crr">
+                                        <rect key="frame" x="-2" y="3" width="120" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Preferred Instance:" id="Z1A-xo-96u">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fis-si-6eK">
+                                        <rect key="frame" x="119" y="-3" width="268" height="25"/>
+                                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="eNx-Ai-MmH">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <menu key="menu" id="uC4-0W-EFe"/>
+                                        </popUpButtonCell>
+                                        <connections>
+                                            <action selector="selectInstance:" target="XfG-lQ-9wD" id="59K-f7-ar2"/>
+                                        </connections>
+                                    </popUpButton>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-DP-5mP">
-                                <rect key="frame" x="20" y="109" width="380" height="176"/>
+                                <rect key="frame" x="20" y="109" width="388" height="176"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="justified" id="vco-8A-9pO">
                                     <font key="font" metaFont="system"/>
                                     <string key="title">Replace all links to YouTube with the Invidious instance selected below (by default invidio.us). 
@@ -158,27 +158,61 @@ To enable/disable this extension, simply click on the button at the bottom of th
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <stackView distribution="equalSpacing" orientation="horizontal" alignment="centerY" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PY2-ft-uRz">
+                                <rect key="frame" x="20" y="21" width="386" height="21"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YBX-Jj-nCD">
+                                        <rect key="frame" x="-2" y="3" width="180" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="⚠️ The extension is disabled" id="3uA-p4-wC6">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-eV-eLQ">
+                                        <rect key="frame" x="194" y="-7" width="198" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Open Safari Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Srx-0j-A4D">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
+                                            <connections>
+                                                <action selector="openSafariExtensionPreferences:" target="XfG-lQ-9wD" id="vKk-Xb-MPh"/>
+                                            </connections>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="oAk-DP-5mP" secondAttribute="trailing" constant="8" id="0UF-0G-qle"/>
-                            <constraint firstAttribute="bottom" secondItem="ooh-eV-eLQ" secondAttribute="bottom" constant="20" symbolic="YES" id="1g8-sH-1yA"/>
-                            <constraint firstAttribute="bottom" secondItem="q8P-jD-crr" secondAttribute="bottom" constant="64" id="8qZ-xq-i0V"/>
+                            <constraint firstItem="pR0-cC-q9W" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="5Pb-Ue-zAU"/>
+                            <constraint firstAttribute="trailing" secondItem="PY2-ft-uRz" secondAttribute="trailing" constant="156" id="9tc-gD-kgp"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="DfV-pM-1kR"/>
                             <constraint firstItem="oAk-DP-5mP" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="Iar-cr-UEb"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="top" secondItem="FWV-e2-WQh" secondAttribute="top" id="N0m-go-JHD"/>
                             <constraint firstItem="EB0-ac-UZR" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ORC-mv-Tnv"/>
                             <constraint firstAttribute="trailing" secondItem="FWV-e2-WQh" secondAttribute="trailing" constant="20" symbolic="YES" id="TZv-Pk-yA1"/>
-                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="top" secondItem="Fis-si-6eK" secondAttribute="bottom" constant="20" id="Yyu-DK-d8O"/>
-                            <constraint firstItem="ooh-eV-eLQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="gsh-we-MJn"/>
-                            <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" secondItem="Fis-si-6eK" secondAttribute="trailing" constant="8" id="ofu-uL-2Lp"/>
+                            <constraint firstItem="PY2-ft-uRz" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Yfj-zF-l7S"/>
+                            <constraint firstItem="Fis-si-6eK" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="246" id="eT7-ns-uWD"/>
+                            <constraint firstAttribute="bottom" secondItem="PY2-ft-uRz" secondAttribute="bottom" constant="21" id="iJa-Wm-cVr"/>
+                            <constraint firstAttribute="trailing" secondItem="pR0-cC-q9W" secondAttribute="trailing" constant="156" id="l16-5m-bfp"/>
                             <constraint firstItem="oAk-DP-5mP" firstAttribute="top" secondItem="EB0-ac-UZR" secondAttribute="bottom" constant="8" id="sdk-6W-FGz"/>
-                            <constraint firstItem="q8P-jD-crr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="uGM-XX-aOx"/>
-                            <constraint firstItem="Fis-si-6eK" firstAttribute="leading" secondItem="q8P-jD-crr" secondAttribute="trailing" constant="8" id="xZa-oh-mnm"/>
                             <constraint firstItem="FWV-e2-WQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EB0-ac-UZR" secondAttribute="trailing" constant="8" symbolic="YES" id="xbs-Hp-uLd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="appNameLabel" destination="EB0-ac-UZR" id="SDO-j1-PQa"/>
+                        <outlet property="extensionStatusLabel" destination="YBX-Jj-nCD" id="ZXe-V1-0eW"/>
                         <outlet property="instancePopUpButton" destination="Fis-si-6eK" id="JnP-Tk-q6j"/>
                     </connections>
                 </viewController>

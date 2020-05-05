@@ -13,11 +13,17 @@ class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
     @IBOutlet weak var instancePopUpButton: NSPopUpButton!
+    @IBOutlet weak var extensionStatusLabel: NSTextField!
     var instanceDict = [String: String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.appNameLabel.stringValue = kAppName
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(ViewController.updateExtensionStatusUI(_:)),
+                                               name: NSNotification.Name(rawValue: kExtensionStatusTopic),
+                                               object: nil)
 
         // Preferences / Defaults handling
         //
@@ -66,8 +72,6 @@ class ViewController: NSViewController {
     }
 
     func getInstanceDict() -> [String: String]? {
-        // TODO: refactor as function, not method?
-
         let localUserDefaults = UserDefaults.standard
 
         if let instanceDict = localUserDefaults.dictionary(forKey: kInstanceDictKey) as? [String: String] {
@@ -184,6 +188,24 @@ class ViewController: NSViewController {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: kExtBundleId) { error in
             if error != nil {
                 displayGenericErrorAndQuit()
+            }
+        }
+    }
+
+    @objc func updateExtensionStatusUI(_ notification: Notification) {
+        guard self.extensionStatusLabel != nil else {
+            return
+        }
+
+        if let enabled = notification.userInfo?["enabled"] as? Bool {
+            if enabled {
+                DispatchQueue.main.async {
+                    self.extensionStatusLabel.stringValue = "\(kEnabledIcon) \(kEnabledString)"
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.extensionStatusLabel.stringValue = "\(kDisabledIcon) \(kDisabledString)"
+                }
             }
         }
     }
