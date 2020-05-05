@@ -9,10 +9,6 @@
 import Cocoa
 import SafariServices.SFSafariApplication
 
-// Constants
-let kSelectedUrlKey = "InstanceURL"
-let kSelectedNameKey = "SelectedInstanceName"
-
 class ViewController: NSViewController {
 
     @IBOutlet var appNameLabel: NSTextField!
@@ -21,7 +17,7 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appNameLabel.stringValue = "invidious"
+        self.appNameLabel.stringValue = kAppName
 
         // Preferences / Defaults handling
         //
@@ -61,7 +57,7 @@ class ViewController: NSViewController {
                                          selectedName: selectedInstanceName)
 
         // Shared Preferences
-        guard let sharedUserDefaults = UserDefaults(suiteName: "com.pythoninside.invidiousGroup") else {
+        guard let sharedUserDefaults = UserDefaults(suiteName: kPreferencesSuiteName) else {
             return displayPreferencesErrorAndQuit(.shared)
         }
 
@@ -74,8 +70,7 @@ class ViewController: NSViewController {
 
         let localUserDefaults = UserDefaults.standard
 
-        let instanceDictKey = "Instances"
-        if let instanceDict = localUserDefaults.dictionary(forKey: instanceDictKey) as? [String: String] {
+        if let instanceDict = localUserDefaults.dictionary(forKey: kInstanceDictKey) as? [String: String] {
             // Cool, things look fine for now. Now grab the name of the selected instance.
             // Make sure that the instanceDict is not empty! Otherwise we have a big problem.
             if instanceDict.capacity < 1 {
@@ -89,11 +84,10 @@ class ViewController: NSViewController {
     func getSelectedInstanceInfo() -> (String, String)? {
         let localUserDefaults = UserDefaults.standard
 
-        let selectedNameKey = "SelectedInstanceName"
         var selectedInstanceUrl = ""
         var selectedInstanceName = ""
 
-        if let name = localUserDefaults.string(forKey: selectedNameKey),
+        if let name = localUserDefaults.string(forKey: kSelectedNameKey),
             let url = self.instanceDict[name] {
             selectedInstanceUrl = url
             selectedInstanceName = name
@@ -109,7 +103,7 @@ class ViewController: NSViewController {
                 selectedInstanceName = nameUrl.key
 
                 // Fix local preferences.
-                localUserDefaults.set(selectedInstanceName, forKey: selectedNameKey)
+                localUserDefaults.set(selectedInstanceName, forKey: kSelectedNameKey)
             } else {
                 return nil
             }
@@ -125,7 +119,7 @@ class ViewController: NSViewController {
         // Some sensible defaults
         var defaults: [String: Any] = [:]
 
-        if let defaultsPath = Bundle.main.path(forResource: "Defaults", ofType: "plist") {
+        if let defaultsPath = Bundle.main.path(forResource: kDefaultPlistName, ofType: kDefaultPlistType) {
             if let dict = NSDictionary(contentsOfFile: defaultsPath) as? [String: Any] {
                 defaults.merge(dict) { (_, new) in new }
             }
@@ -161,20 +155,33 @@ class ViewController: NSViewController {
             if let selectedInstanceUrl = self.instanceDict[selectedInstanceName] {
                 let localUserDefaults = UserDefaults.standard
 
-                guard let sharedUserDefaults = UserDefaults(suiteName: "com.pythoninside.invidiousGroup") else {
+                guard let sharedUserDefaults = UserDefaults(suiteName: kPreferencesSuiteName) else {
                     return
                 }
 
                 localUserDefaults.set(selectedInstanceName, forKey: kSelectedNameKey)
                 sharedUserDefaults.set(selectedInstanceUrl as String, forKey: kSelectedUrlKey)
+
+                // Tell our friendly extension that a (new) instance was selected.
+                SFSafariApplication.dispatchMessage(withName: kInstanceMessageTopic,
+                                                    toExtensionWithIdentifier: kExtBundleId,
+                                                    userInfo: [kSelectedUrlKey: selectedInstanceUrl],
+                                                    completionHandler: self.messageCallback)
             }
             // else: we got an error: let's ignore that and hope for the best :-)
         }
     }
 
+    func messageCallback(error: Error?) {
+        if error == nil {
+            print("Everything is OK")
+        } else {
+            print("Got an error: \(String(describing: error))")
+        }
+    }
+
     @IBAction func openSafariExtensionPreferences(_ sender: AnyObject?) {
-        SFSafariApplication.showPreferencesForExtension(
-        withIdentifier: "com.pythoninside.invidious-Extension") { error in
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: kExtBundleId) { error in
             if error != nil {
                 displayGenericErrorAndQuit()
             }

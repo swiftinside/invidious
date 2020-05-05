@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C44F6D5C24612DAC0064EC37 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FC3E7245B152300B48291 /* Utils.swift */; };
+		C44F6D5E24612DCB0064EC37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F6D5D24612DCB0064EC37 /* Constants.swift */; };
+		C44F6D5F24612DCB0064EC37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F6D5D24612DCB0064EC37 /* Constants.swift */; };
 		C45FC3E3245ADDC000B48291 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C45FC3E2245ADDC000B48291 /* Defaults.plist */; };
 		C45FC3E8245B152300B48291 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FC3E7245B152300B48291 /* Utils.swift */; };
 		C474F1992450549A00A10ABF /* invidious.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = C474F1982450549A00A10ABF /* invidious.entitlements */; };
@@ -48,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C44F6D5D24612DCB0064EC37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C45FC3E2245ADDC000B48291 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C45FC3E7245B152300B48291 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C474F1952450549A00A10ABF /* invidious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = invidious.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,9 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C44F6D5B24612D990064EC37 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C45FC3E7245B152300B48291 /* Utils.swift */,
+				C44F6D5D24612DCB0064EC37 /* Constants.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		C474F18C2450549A00A10ABF = {
 			isa = PBXGroup;
 			children = (
+				C44F6D5B24612D990064EC37 /* Shared */,
 				C474F1972450549A00A10ABF /* invidious */,
 				C474F1AF2450549C00A10ABF /* invidious Extension */,
 				C474F1AC2450549C00A10ABF /* Frameworks */,
@@ -113,7 +127,6 @@
 				C474F19A2450549A00A10ABF /* AppDelegate.swift */,
 				C474F19C2450549A00A10ABF /* Main.storyboard */,
 				C474F19F2450549A00A10ABF /* ViewController.swift */,
-				C45FC3E7245B152300B48291 /* Utils.swift */,
 				C474F1A12450549C00A10ABF /* Assets.xcassets */,
 				C474F1A32450549C00A10ABF /* Info.plist */,
 				C45FC3E2245ADDC000B48291 /* Defaults.plist */,
@@ -272,6 +285,7 @@
 				C474F1A02450549A00A10ABF /* ViewController.swift in Sources */,
 				C474F19B2450549A00A10ABF /* AppDelegate.swift in Sources */,
 				C45FC3E8245B152300B48291 /* Utils.swift in Sources */,
+				C44F6D5E24612DCB0064EC37 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +295,8 @@
 			files = (
 				C474F1B32450549C00A10ABF /* SafariExtensionViewController.swift in Sources */,
 				C474F1B12450549C00A10ABF /* SafariExtensionHandler.swift in Sources */,
+				C44F6D5C24612DAC0064EC37 /* Utils.swift in Sources */,
+				C44F6D5F24612DCB0064EC37 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
