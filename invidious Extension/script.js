@@ -47,21 +47,38 @@ function alreadySanitized(url) {
 }
 
 function sanitizeYouTubeURL(url, invidiousURL) {
+  // Given a YT URL, translate it to the invidious equivalent.
+
   if (alreadySanitized(url)) {
     return url;
   }
 
-  if (ythostnames.includes(url.hostname)) {
-    if (url.pathname.search('^/(watch|playlist|search|channel)') > -1 || url.pathname.startsWith('/embed/')) {
-      return new URL(`${invidiousURL.href}${url.pathname}${url.search}`);
-    }
-    return invidiousURL;
+  const sanitizedURL = new URL(invidiousURL.href);
+
+  // 1. Handle cases where a video ID is specified in the input URL
+  let p = /(?:\/|%3D|v=|vi=)(?<vid>[0-9A-z-_]{11})(?:[%#?&]|$)/;
+  let m = p.exec(url.href);
+  if (m !== null && m.length > 1) {
+    sanitizedURL.pathname = '/watch';
+    sanitizedURL.search = `?v=${m.groups.vid}`;
+    return sanitizedURL;
   }
 
-  if (ytwatchhostnames.includes(url.hostname)) {
-    return new URL(`${invidiousURL.href}/watch?v=${url.pathname.replace('/', '')}`);
+  // 2. Handle all other cases.
+  p = /(.*\.)youtu(be.com|\.be)\/(.*)/;
+  m = p.exec(url.href);
+  if (m !== null && m.length >= 3) {
+    sanitizedURL.pathname = url.pathname;
+    sanitizedURL.search = url.search;
+    return sanitizedURL;
   }
-  return url;
+
+  // 3. Dunno how to handle that, so I will just redirect to invidious
+  return sanitizedURL;
+}
+
+function isYouTubeLink(url) {
+  return ythostnames.includes(url.hostname) || ytwatchhostnames.includes(url.hostname);
 }
 
 function sanitizeGoogleURL(url) {
@@ -73,10 +90,6 @@ function sanitizeGoogleURL(url) {
 
 function sanitizeFacebookURL(url) {
   return new URL(url.searchParams.get('u'));
-}
-
-function isYouTubeLink(url) {
-  return ythostnames.includes(url.hostname);
 }
 
 function isGoogleLink(url) {
