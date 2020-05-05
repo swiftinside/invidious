@@ -25,3 +25,7 @@ let kDefaultInstanceUrl = "https://invidio.us"
 
 // UI Elements
 let kAppName = "invidious"
+let kEnabledIcon = "🟢"
+let kDisabledIcon = "🔴"
+let kEnabledString = "The extension is enabled"
+let kDisabledString = "The extension is disabled"
