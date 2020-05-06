@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4246523246309AB00936EA6 /* Doc in Resources */ = {isa = PBXBuildFile; fileRef = C4246522246309AB00936EA6 /* Doc */; };
+		C424652524631F2A00936EA6 /* invidiousmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = C424652424631F2A00936EA6 /* invidiousmenu.png */; };
+		C424652724631F3000936EA6 /* safariprefs.png in Resources */ = {isa = PBXBuildFile; fileRef = C424652624631F3000936EA6 /* safariprefs.png */; };
+		C424652924631F3600936EA6 /* bootstrap.css in Resources */ = {isa = PBXBuildFile; fileRef = C424652824631F3500936EA6 /* bootstrap.css */; };
 		C44F6D5C24612DAC0064EC37 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FC3E7245B152300B48291 /* Utils.swift */; };
 		C44F6D5E24612DCB0064EC37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F6D5D24612DCB0064EC37 /* Constants.swift */; };
 		C44F6D5F24612DCB0064EC37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44F6D5D24612DCB0064EC37 /* Constants.swift */; };
@@ -48,6 +52,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C424651C246306D500936EA6 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		C424651E246308F700936EA6 /* invidious.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invidious.png; sourceTree = "<group>"; };
+		C424651F246308F700936EA6 /* invidioussmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invidioussmall.png; sourceTree = "<group>"; };
+		C4246522246309AB00936EA6 /* Doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Doc; sourceTree = "<group>"; };
+		C424652424631F2A00936EA6 /* invidiousmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invidiousmenu.png; sourceTree = "<group>"; };
+		C424652624631F3000936EA6 /* safariprefs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = safariprefs.png; sourceTree = "<group>"; };
+		C424652824631F3500936EA6 /* bootstrap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = bootstrap.css; sourceTree = "<group>"; };
 		C44F6D5D24612DCB0064EC37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C45FC3E2245ADDC000B48291 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C45FC3E7245B152300B48291 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -85,6 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C424651B2463069A00936EA6 /* Doc */ = {
+			isa = PBXGroup;
+			children = (
+				C424651E246308F700936EA6 /* invidious.png */,
+				C424651F246308F700936EA6 /* invidioussmall.png */,
+				C424652424631F2A00936EA6 /* invidiousmenu.png */,
+				C424652624631F3000936EA6 /* safariprefs.png */,
+				C424651C246306D500936EA6 /* index.html */,
+				C424652824631F3500936EA6 /* bootstrap.css */,
+			);
+			path = Doc;
+			sourceTree = "<group>";
+		};
 		C44F6D5B24612D990064EC37 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +121,8 @@
 		C474F18C2450549A00A10ABF = {
 			isa = PBXGroup;
 			children = (
+				C424651B2463069A00936EA6 /* Doc */,
+				C4246522246309AB00936EA6 /* Doc */,
 				C44F6D5B24612D990064EC37 /* Shared */,
 				C474F1972450549A00A10ABF /* invidious */,
 				C474F1AF2450549C00A10ABF /* invidious Extension */,
@@ -229,7 +255,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4246523246309AB00936EA6 /* Doc in Resources */,
+				C424652524631F2A00936EA6 /* invidiousmenu.png in Resources */,
+				C424652924631F3600936EA6 /* bootstrap.css in Resources */,
 				C45FC3E3245ADDC000B48291 /* Defaults.plist in Resources */,
+				C424652724631F3000936EA6 /* safariprefs.png in Resources */,
 				C474F1992450549A00A10ABF /* invidious.entitlements in Resources */,
 				C474F1A22450549C00A10ABF /* Assets.xcassets in Resources */,
 				C474F19E2450549A00A10ABF /* Main.storyboard in Resources */,
