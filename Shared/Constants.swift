@@ -12,9 +12,9 @@ let kSelectedNameKey = "SelectedInstanceName"
 let kInstanceDictKey = "Instances"
 let kDefaultPlistName = "Defaults"
 let kDefaultPlistType = "plist"
-let kAppBundleId = "com.pythoninside.invidious"
-let kExtBundleId = "com.pythoninside.invidious-Extension"
-let kPreferencesSuiteName = "com.pythoninside.invidiousGroup"
+let kAppBundleId = "com.swiftinside.invidious"
+let kExtBundleId = "com.swiftinside.invidious-Extension"
+let kPreferencesSuiteName = "com.swiftinside.invidiousGroup"
 
 // Messages to/from extension and to/from script
 let kInstanceMessageTopic = "instanceChanged"
@@ -31,4 +31,4 @@ let kEnabledString = "The extension is enabled  "    // Just to make the two str
 let kDisabledString = "The extension is disabled"
 
 // Notifications
-let kExtensionStatusTopic = "com.pythoninside.invidious:extensionStatusUpdated"
+let kExtensionStatusTopic = "com.swiftinside.invidious:extensionStatusUpdated"

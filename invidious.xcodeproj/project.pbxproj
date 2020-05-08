@@ -458,14 +458,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "invidious Extension/invidious_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = "invidious Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pythoninside.invidious-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftinside.invidious-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -477,14 +477,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "invidious Extension/invidious_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = "invidious Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pythoninside.invidious-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftinside.invidious-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,13 +499,13 @@
 				CODE_SIGN_ENTITLEMENTS = invidious/invidious.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = invidious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pythoninside.invidious;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftinside.invidious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -519,13 +519,13 @@
 				CODE_SIGN_ENTITLEMENTS = invidious/invidious.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = W97Q9FB5BS;
+				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = invidious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pythoninside.invidious;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftinside.invidious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

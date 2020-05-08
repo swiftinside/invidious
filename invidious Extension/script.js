@@ -2,7 +2,7 @@
  Look at all links in the current page and, if any of them references a YouTube video, install a
  click event handler that redirects to the corresponding video on ividio.us.
 
- Author: Francesco Pierfederici <me@pythoninside.com>
+ Author: Francesco Pierfederici <support@swiftinside.com>
 
  Thanks to https://github.com/mperez01/no-youtube for inspiration
  */
