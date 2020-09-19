@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>com.swiftinside.invidiousGroup</string>
+		<string>64P784C2S9.invidiousGroup</string>
 	</array>
 	<key>com.apple.security.files.user-selected.read-write</key>
 	<true/>

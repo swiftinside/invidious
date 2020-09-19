@@ -13,8 +13,8 @@ let kInstanceDictKey = "Instances"
 let kDefaultPlistName = "Defaults"
 let kDefaultPlistType = "plist"
 let kAppBundleId = "com.swiftinside.invidious"
-let kExtBundleId = "com.swiftinside.invidious-Extension"
-let kPreferencesSuiteName = "com.swiftinside.invidiousGroup"
+let kExtBundleId = "com.swiftinside.invidious.Extension"
+let kPreferencesSuiteName = "64P784C2S9.invidiousGroup"
 
 // Messages to/from extension and to/from script
 let kInstanceMessageTopic = "instanceChanged"

@@ -62,7 +62,7 @@
 		C44F6D5D24612DCB0064EC37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C45FC3E2245ADDC000B48291 /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C45FC3E7245B152300B48291 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		C474F1952450549A00A10ABF /* invidious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = invidious.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C474F1952450549A00A10ABF /* invidious for Safari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "invidious for Safari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C474F1982450549A00A10ABF /* invidious.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = invidious.entitlements; sourceTree = "<group>"; };
 		C474F19A2450549A00A10ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C474F19D2450549A00A10ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		C474F1962450549A00A10ABF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C474F1952450549A00A10ABF /* invidious.app */,
+				C474F1952450549A00A10ABF /* invidious for Safari.app */,
 				C474F1A82450549C00A10ABF /* invidious Extension.appex */,
 			);
 			name = Products;
@@ -176,9 +176,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C474F1942450549A00A10ABF /* invidious */ = {
+		C474F1942450549A00A10ABF /* invidious for Safari */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious" */;
+			buildConfigurationList = C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious for Safari" */;
 			buildPhases = (
 				C45FC3E6245B0CBF00B48291 /* ShellScript */,
 				C474F1912450549A00A10ABF /* Sources */,
@@ -191,9 +191,9 @@
 			dependencies = (
 				C474F1AB2450549C00A10ABF /* PBXTargetDependency */,
 			);
-			name = invidious;
+			name = "invidious for Safari";
 			productName = invidious;
-			productReference = C474F1952450549A00A10ABF /* invidious.app */;
+			productReference = C474F1952450549A00A10ABF /* invidious for Safari.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C474F1A72450549C00A10ABF /* invidious Extension */ = {
@@ -244,7 +244,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C474F1942450549A00A10ABF /* invidious */,
+				C474F1942450549A00A10ABF /* invidious for Safari */,
 				C474F1A72450549C00A10ABF /* invidious Extension */,
 			);
 		};
@@ -390,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -444,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -458,6 +458,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "invidious Extension/invidious_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = "invidious Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,7 +466,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftinside.invidious-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftinside.invidious.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -477,6 +478,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "invidious Extension/invidious_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = "invidious Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,7 +486,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftinside.invidious-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftinside.invidious.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,6 +501,7 @@
 				CODE_SIGN_ENTITLEMENTS = invidious/invidious.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = invidious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,6 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = invidious/invidious.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 64P784C2S9;
 				INFOPLIST_FILE = invidious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -552,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious" */ = {
+		C474F1C32450549C00A10ABF /* Build configuration list for PBXNativeTarget "invidious for Safari" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C474F1C42450549C00A10ABF /* Debug */,

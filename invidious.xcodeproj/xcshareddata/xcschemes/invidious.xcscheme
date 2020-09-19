@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C474F1942450549A00A10ABF"
-               BuildableName = "invidious.app"
-               BlueprintName = "invidious"
+               BuildableName = "invidious for Safari.app"
+               BlueprintName = "invidious for Safari"
                ReferencedContainer = "container:invidious.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C474F1942450549A00A10ABF"
-            BuildableName = "invidious.app"
-            BlueprintName = "invidious"
+            BuildableName = "invidious for Safari.app"
+            BlueprintName = "invidious for Safari"
             ReferencedContainer = "container:invidious.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C474F1942450549A00A10ABF"
-            BuildableName = "invidious.app"
-            BlueprintName = "invidious"
+            BuildableName = "invidious for Safari.app"
+            BlueprintName = "invidious for Safari"
             ReferencedContainer = "container:invidious.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
