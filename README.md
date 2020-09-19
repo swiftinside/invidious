@@ -20,6 +20,10 @@ For more information and updates, please check out this page or send email to [s
 
 Have fun in a world with somewhat fewer ads and tracking beacons!
 
+### How to Build
+
+You need a recent version of XCode (tested to work on XCode 11). Open invidious.xcodeproj and build the project. Yoy might (most likely will) have to change the signing certificates.
+
 #### News & Updates
 
 *   Sep 19, 2020: open sourced
